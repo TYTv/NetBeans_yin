@@ -18,6 +18,11 @@ public class TextView extends View {
         this.text = text;
     }
 
+    public TextView(int id, String text, int w, int h) {
+        super(id, w, h);
+        this.text = text;
+    }
+
     @Override
     public void onDraw() {
         System.out.println("text:" + text);
@@ -27,10 +32,9 @@ public class TextView extends View {
     public String getText() {
         return text;
     }
-    
-    
+
     public void setText(String s) {
-       this.text = s;
+        this.text = s;
     }
-    
+
 }

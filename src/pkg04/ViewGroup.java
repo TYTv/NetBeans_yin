@@ -22,11 +22,17 @@ public class ViewGroup extends View {
         v = new ArrayList<>();
     }
 
+    public ViewGroup(int id, int w, int h) {
+        super(id, w, h);
+
+        v = new ArrayList<>();
+    }
+
     public void addView(View vg) {
         v.add(vg);
     }
 
-    public void drawAll(){
+    public void drawAll() {
         for (View i : v) {
             i.onDraw();
         }
@@ -36,5 +42,13 @@ public class ViewGroup extends View {
         return this.v.get(i);
     }
 
-    
+    public View findViewById(final int id) {
+        for (int i = 0; i < this.v.size(); i++) {
+            if (id == ((View) this.v.get(i)).getId()) {
+                return this.v.get(i);
+            }
+        }
+        return null;
+    }
+
 }

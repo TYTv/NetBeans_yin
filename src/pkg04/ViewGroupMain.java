@@ -5,6 +5,7 @@
  */
 package pkg04;
 
+import javafx.scene.shape.SVGPath;
 import pkg03.ImageView;
 import pkg03.View;
 import pkg03.TextView;
@@ -22,23 +23,28 @@ public class ViewGroupMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ViewGroup vg = new ViewGroup(20, 30);
+        ViewGroup vg = new ViewGroup(0, 20, 30);
 
-        vg.addView(new View(3, 2));
-        vg.addView(new ImageView("鳴人", 10, 5));
-        vg.addView(new TextView("Hello", 10, 5));
-        vg.addView(new Button("OK", 10, 5));
+        vg.addView(new View(1, 3, 2));
+        vg.addView(new ImageView(2, "鳴人", 10, 5));
+        vg.addView(new TextView(3, "Hello", 10, 5));
+        vg.addView(new Button(4, "OK", 10, 5));
         vg.drawAll();
 
         System.out.println("---------------------------");
-
         TextView tv = (TextView) vg.getView(2);
         tv.setText("Hi");
         tv.onDraw();
-        
+
         System.out.println("----------Draw All----------");
         vg.drawAll();
 
+        System.out.println("-------find view by id------");
+        Button b = (Button)vg.findViewById(4);
+        b.setText("Okay");
+        vg.drawAll();
+        
+        
     }
 
 }

@@ -10,13 +10,17 @@ package pkg03;
  * @author student
  */
 public class ImageView extends View {
-String name;
+
+    String name;
 
     public ImageView(String imString, int w, int h) {
         super(w, h);
         this.name = imString;
-        
-        
+    }
+
+    public ImageView(int id, String imString, int w, int h) {
+        super(id, w, h);
+        this.name = imString;
     }
 
     @Override

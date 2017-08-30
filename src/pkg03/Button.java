@@ -15,6 +15,10 @@ public class Button extends TextView {
         super(text, w, h);
     }
 
+    public Button(int id, String text, int w, int h) {
+        super(id, text, w, h);
+    }
+
     public void onClick() {
         System.out.println("按了 " + getText() + " Button");
     }

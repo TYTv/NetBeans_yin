@@ -11,17 +11,29 @@ package pkg03;
  */
 public class View {
 
+    private final int id;
     private int w;
     private int h;
 
     public View(int w, int h) {
-        this.w = w;
-        this.h = h;
 
         if (w < 0 || h < 0) {
             throw new RuntimeException("寬高不能 < 0");
         }
 
+        this.id = -1;
+        this.w = w;
+        this.h = h;
+    }
+
+    public View(int id, int w, int h) {
+
+        if (w < 0 || h < 0) {
+            throw new RuntimeException("寬高不能 < 0");
+        }
+        this.id = id;
+        this.w = w;
+        this.h = h;
     }
 
     View() {
@@ -35,6 +47,10 @@ public class View {
             }
             System.out.println("");
         }
+    }
+
+    public int getId() {
+        return id;
     }
 
 }
