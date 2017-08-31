@@ -11,9 +11,14 @@ package pkg05;
  */
 public class R {
 
-    public static final int view = 1;
-    public static final int imageview = 2;
-    public static final int textview = 3;
-    public static final int button = 4;
+    public class id {
+
+        public static final int viewgroup = 0;
+        public static final int view = 1;
+        public static final int imageview = 2;
+        public static final int textview = 3;
+        public static final int button = 4;
+
+    }
 
 }

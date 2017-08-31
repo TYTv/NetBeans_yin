@@ -23,11 +23,11 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        ViewGroup vg = new ViewGroup(0, 20, 30);
-        vg.addView(new View(R.view, 3, 2));
-        vg.addView(new ImageView(R.imageview, "鳴人", 10, 5));
-        vg.addView(new TextView(R.textview, "Hello", 10, 5));
-        vg.addView(new Button(R.button, "OK", 10, 5));
+        ViewGroup vg = new ViewGroup(R.id.viewgroup, 20, 30);
+        vg.addView(new View(R.id.view, 3, 2));
+        vg.addView(new ImageView(R.id.imageview, "鳴人", 10, 5));
+        vg.addView(new TextView(R.id.textview, "Hello", 10, 5));
+        vg.addView(new Button(R.id.button, "OK", 10, 5));
         vg.drawAll();
 
         System.out.println("---------------------------");
@@ -39,7 +39,7 @@ public class Main {
         vg.drawAll();
 
         System.out.println("-------find view by id------");
-        Button b = (Button) vg.findViewById(R.button);
+        Button b = (Button) vg.findViewById(R.id.button);
         b.setText("Okay");
         vg.drawAll();
 
