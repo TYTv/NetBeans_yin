@@ -1,3 +1,5 @@
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz
-0123456789
+R.id.viewgroup,  20, 30
+R.id.view , 3,, 2
+R.id.imageview ,    "鳴人", 10,,,,, 5
+R.id.textview, "Hello", 10, 5
+R.id.button, "OK", 10, 5
